@@ -15,7 +15,7 @@ class App extends Component {
   handleClick = (grade) => {
     this.setState((prevState) => ({ [grade]: prevState[grade] + 1}));
     this.setState ({feedbackOptions: true})
-  }
+  };
 
   countTotalFeedback = () =>{
     const {good, neutral, bad} = this.state;
@@ -37,7 +37,7 @@ class App extends Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 
 export default App;

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { FeedbackWrapp, Button } from "./Feedback.styled";
 
 const Feedback = ({ onFeedback }) => {
@@ -9,6 +11,10 @@ const Feedback = ({ onFeedback }) => {
       <Button onClick={() => onFeedback("bad")}>Bad</Button>
     </FeedbackWrapp>
   );
+};
+
+Feedback.propTypes = {
+  onFeedback: PropTypes.func.isRequired,
 };
 
 export default Feedback;

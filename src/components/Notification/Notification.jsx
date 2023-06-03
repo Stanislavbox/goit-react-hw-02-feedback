@@ -1,8 +1,9 @@
-import {NotificationDiv} from "./Notification.styled"
+import {NotificationDiv} from "./Notification.styled";
+
 const Notification = () => {
   return(
     <NotificationDiv>There is no feedback</NotificationDiv>
-  )
-}
+  );
+};
 
-export default Notification
+export default Notification;
