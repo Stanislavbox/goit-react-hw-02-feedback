@@ -1,20 +1,24 @@
+import React, { Component } from 'react';
 import PropTypes from "prop-types";
-
 import { FeedbackWrapp, Button } from "./Feedback.styled";
 
-const Feedback = ({ onFeedback }) => {
-  return (
-    <FeedbackWrapp>
-      <h2>Please leave feedback</h2>
-      <Button onClick={() => onFeedback("good")}>Good</Button>
-      <Button onClick={() => onFeedback("neutral")}>Neutral</Button>
-      <Button onClick={() => onFeedback("bad")}>Bad</Button>
-    </FeedbackWrapp>
-  );
-};
+export class Feedback extends Component {
+  render() {
+    const { options, onFeedback } = this.props;
+    return (
+      <FeedbackWrapp>
+        {options.map(option => (
+          <Button
+            key={option}
+            onClick={() => onFeedback(option)}>
+            {option}
+          </Button>
+        ))}
+      </FeedbackWrapp>
+    );
+  }
+}
 
 Feedback.propTypes = {
   onFeedback: PropTypes.func.isRequired,
 };
-
-export default Feedback;

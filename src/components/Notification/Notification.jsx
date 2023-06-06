@@ -1,7 +1,8 @@
-import {NotificationDiv} from "./Notification.styled";
+import React from 'react';
+import { NotificationDiv } from "./Notification.styled";
 
 const Notification = () => {
-  return(
+  return (
     <NotificationDiv>There is no feedback</NotificationDiv>
   );
 };
